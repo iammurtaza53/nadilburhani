@@ -72,9 +72,10 @@ export class AttendencePage implements OnInit {
       duration: 2000,
       color:color,
     });
-   setTimeout(() => {
     toast.present();
-   }, 2000);
+  //  setTimeout(() => {
+    
+  //  }, 2000);
   
   }
 

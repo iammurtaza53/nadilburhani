@@ -1,5 +1,7 @@
 {
   "name": "nadil_burhani",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -21,8 +21,33 @@ export class AppComponent implements OnInit {
     {
       title: 'Attendence',
       url: '/attendence',
-      icon: 'timer',
+      path: './assets/images/attendence.png',
     },
+    // {
+    //   title: 'Games',
+    //   url: '/games',
+    //   path: 'timer',
+    // },
+    {
+      title: 'Archery',
+      url: '/archery',
+      path: './assets/images/archery.png',
+    },
+    {
+      title: 'Cricket Academy',
+      url: '/cricket',
+      path: './assets/images/cricket.png',
+    },
+    {
+      title: 'Horse Riding',
+      url: '/horse-riding',
+      path: './assets/images/horse.png',
+    },
+    {
+      title: 'Football',
+      url: '/football',
+      path: './assets/images/futsal.png',
+    }
     // {
     //   title: 'Favorites',
     //   url: '/folder/Favorites',
