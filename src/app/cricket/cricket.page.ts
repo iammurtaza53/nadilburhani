@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cricket.page.scss'],
 })
 export class CricketPage implements OnInit {
+  slideOpts = {
+    initialSlide: 1,
+    loop: true,
+  };
 
   constructor() { }
 
