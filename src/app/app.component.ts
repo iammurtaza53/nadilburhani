@@ -19,9 +19,9 @@ export class AppComponent implements OnInit {
     //   icon: 'mail'
     // },
     {
-      title: 'Attendence',
+      title: '  Attendence',
       url: '/attendence',
-      path: './assets/images/attendence.png',
+      path1: './assets/images/attendence.png',
     },
     // {
     //   title: 'Games',

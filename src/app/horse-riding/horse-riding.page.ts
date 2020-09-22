@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./horse-riding.page.scss'],
 })
 export class HorseRidingPage implements OnInit {
+  slideOpts = {
+    initialSlide: 3,
+    loop: true,
+  };
 
   constructor() { }
 

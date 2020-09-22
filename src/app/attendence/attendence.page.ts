@@ -5,6 +5,8 @@ import { DataService } from '../services/data.service';
 import { NavController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular'
 import { from } from 'rxjs';
+import { Dialogs } from '@ionic-native/dialogs/ngx';
+import { type } from 'os';
 // import { type } from 'os';
 
 @Component({
@@ -19,6 +21,7 @@ export class AttendencePage implements OnInit {
   alertCtrl: any;
 
   constructor(
+    private dialogs: Dialogs,
     private formBuilder: FormBuilder,
     private dataService: DataService,
     public toastController: ToastController,
@@ -26,6 +29,7 @@ export class AttendencePage implements OnInit {
     ) {
     this.att_form = this.formBuilder.group({
       reg_no: ['', Validators.required, ],
+
       date: ""
     });
   }
@@ -62,17 +66,31 @@ export class AttendencePage implements OnInit {
    
 
   }
+  
+    //toast.present();
   async openToast(val,msg) {
     var color = "success";
-    if(!val){
-      color = "danger";
-    }
-    const toast = await this.toastController.create({
+    
+    const successtoast = this.toastController.create({
       message: msg,
-      duration: 2000,
-      color:color,
+      duration: 1000,
+      color:"success",
     });
-    toast.present();
+    const dangertoast = this.toastController.create({
+      message: msg,
+      duration: 1000,
+      color:"danger",
+    });
+    if(!val){
+      (await dangertoast).present();
+    }
+    else{
+      (await successtoast).present();
+    }
+
+  // this.dialogs.alert('Hello world')
+  // .then(() => console.log('Dialog dismissed'))
+  // .catch(e => console.log('Error displaying dialog', e));
   //  setTimeout(() => {
     
   //  }, 2000);
