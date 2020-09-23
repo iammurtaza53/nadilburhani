@@ -1,9 +1,79 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>Football</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="bg">
+  <ion-slides  [options]="slideOpts">
+    <ion-slide>
+      <div><img src="./assets/football/football_silde1.jpg" /></div>  
+    </ion-slide>
+    <ion-slide >
+      <div><img src="./assets/football/football_silde2.jpg" /></div>  
+    </ion-slide>
+  </ion-slides>
 
+  <h2 class="vc_custom_heading"> FOOTBALL ACADEMY </h2>
+
+  <h4 class="heading"> Football at Al Nadi-al-Burhani </h4>
+  <p class="para"> The  court size is 40 m × 20 m (44 yd × 22 yd). The inner edges of the vertical goal posts is 3 m (3.3 yd) apart, and the lower edge of the horizontal crossbar supported by the goal posts is 2 m (2.2 yd) above the ground. Nets made of hemp, jute or nylon are attached to the back of the goalposts and crossbar. The depth of the goal is 80 cm (31 in) at the top and 1 m (3.3 ft) at the bottom.</p>
+  
+  <div><img src="./assets/football/futsal-1.jpg" /></div>
+
+  <h2 class="archery-green"> COACHING PROGRAM </h2>
+
+  <p class="text1"> Some tips to avoid injuries when playing any Sports </p>
+    <ul>
+      <li class="text1" > Drink water before, during and after play. </li>
+      <li class="text1"> Wear broad-spectrum sunscreen, sunglasses and a hat, even in cloudy conditions. </li>
+      <li class="text1"> Always warm up, stretch and cool down.</li>
+      <li class="text1"> Good technique and practice will help prevent injury. </li>
+      <li class="text1"> Wear the right protective equipment. </li>
+      <li class="text1"> Seek professional advice on footwear. </li>
+    </ul>
+    <div><img src="./assets/football/football.jpg" /></div>
+
+  <h2 class="archery-green"> Recent Activities </h2>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle><img src="./assets/football/football1.jpg" /></ion-card-subtitle>
+      <ion-card-title>Senior & Junior players at Al Nadi Al Burhani Academy</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Best performance for 3 months (Oct to Dec-18) from Senior & Junior players at Al Nadi Al Burhani Academy.
+      Senior : Burhanuddin Mohammad
+      Junior : Mustafa Mohammad Lanewala
+    </ion-card-content>
+    <ion-card-content>
+      <!-- <ion-button> Read More</ion-button> -->
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card >
+
+    <ion-avatar class="coach"> <img src="./assets/football/coach-1.jpg" /></ion-avatar>
+    <ion-card-title class="coaches" > <h2> Mohsin Yousfzai </h2> </ion-card-title>
+    <ion-card-title class="coaches">Former international and national player </ion-card-title>
+
+  <ion-card-content class="coaches">Certified Level C coach by AFC & FIFA</ion-card-content>
+</ion-card>
+
+<ion-card >
+
+  <ion-avatar class="coach"> <img src="./assets/football/coach-2.jpg" /></ion-avatar>
+  <ion-card-title class="coaches" > <h2> Abdul Waheed </h2> </ion-card-title>
+  <ion-card-title class="coaches"> Former internationally selected player </ion-card-title>
+
+
+</ion-card>
+
+  <br>
+  <br>
+  <br>
 </ion-content>

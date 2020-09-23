@@ -26,3 +26,19 @@
     font-weight: 400;
     margin-left: 7px;
 }
+
+.coach{     
+    width:100% !important;  
+    height : 100% !important;  
+    max-width: 100px !important;  //any size
+    max-height: 100px !important; //any size 
+    margin-left: 73px;
+}
+
+.coaches{
+    text-align: center;
+}
+
+.bg{
+    --background: url("../../assets/recent-bg.jpg") no-repeat rgb(245, 245, 243) 80% 30%;
+}

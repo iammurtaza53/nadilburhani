@@ -1,21 +1,25 @@
 <ion-header>
   <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>Attendence</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding bg" >
 
-  <form [formGroup]="att_form" (ngSubmit)="logForm()">
-    <ion-item>
-      <ion-label position="floating" color="primary">Reg no</ion-label>
-      <ion-input  type="number" formControlName="reg_no"></ion-input>
-    </ion-item>
-    <ion-button (click)="openToast()" expand="block" ion-button type="submit"  [disabled]="!att_form.valid">Mark Attendence</ion-button>
-  </form>
-  <!-- <ion-item>
-    <ion-label>YYYY</ion-label>
-    <ion-datetime [pickerOptions]="" placeholder="Custom Options" displayFormat="YYYY MM DD" ></ion-datetime>
-  </ion-item> -->
-
+  <div>
+    <form [formGroup]="att_form" (ngSubmit)="logForm()">
+      <ion-item>
+        <ion-label position="floating" color="primary">Reg no</ion-label>
+        <ion-input type="text" pattern="[0-9]*" formControlName="reg_no"></ion-input>
+      </ion-item>
+      <ion-button expand="block" ion-button type="submit" [disabled]="!att_form.valid">Mark Attendence</ion-button>
+    </form>
+    <!-- <ion-item>
+      <ion-label>YYYY</ion-label>
+      <ion-datetime [pickerOptions]="" placeholder="Custom Options" displayFormat="YYYY MM DD" ></ion-datetime>
+    </ion-item> -->
+  </div>
 </ion-content>

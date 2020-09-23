@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./football.page.scss'],
 })
 export class FootballPage implements OnInit {
+  slideOpts = {
+    initialSlide: 3,
+    loop: true,
+  };
 
   constructor() { }
 
