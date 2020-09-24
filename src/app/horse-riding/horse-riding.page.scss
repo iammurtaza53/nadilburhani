@@ -28,17 +28,16 @@
 }
 
 .coach{     
-    width:100% !important;  
-    height : 100% !important;  
-    max-width: 100px !important;  //any size
-    max-height: 100px !important; //any size 
-    margin-left: 73px;
+    vertical-align: middle;
+    width: 40%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 .coaches{
     text-align: center;
+    padding-left: 10px;
 }
-
 .bg{
     --background: url("../../assets/recent-bg.jpg") no-repeat rgb(245, 245, 243) 80% 30%;
 }
