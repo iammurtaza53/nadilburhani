@@ -47,12 +47,12 @@ export class AppComponent implements OnInit {
       title: 'Football',
       url: '/football',
       path: './assets/images/futsal.png',
-    }
-    // {
-    //   title: 'Favorites',
-    //   url: '/folder/Favorites',
+    },
+    {
+      title: 'Logut',
+       url: '/login',
     //   icon: 'heart'
-    // },
+     },
     // {
     //   title: 'Archived',
     //   url: '/folder/Archived',
