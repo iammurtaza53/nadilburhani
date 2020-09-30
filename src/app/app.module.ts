@@ -8,6 +8,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import {DataService} from './services/data.service';
+import {NFC, Ndef} from '@ionic-native/nfc/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -26,6 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     StatusBar,
+    NFC,
+    Ndef,
     SplashScreen,
     DataService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

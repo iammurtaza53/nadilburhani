@@ -6,18 +6,23 @@ import { Observable } from "rxjs";
   providedIn: "root",
 })
 export class DataService {
-  [x: string]: any;
-  constructor(private http: HttpClient) {}
+
+  constructor(private http: HttpClient,) { }
 
   MarkAttendence(obj) {
     let id = obj["reg_no"];
     let NADIL_URL = `https://www.alnadialburhani.com/app/attendance.php?reg_no=${id}&date=2020-09-05`;
- 
+
     return this.http.get<any>(NADIL_URL);
   }
 
-  Login(obj) {
-    // let id = obj["email"];
-
+  Login(email, password) {
+    if (email == 'admin@gmail.com' && password == 'admin123456') {
+     return true
+    } else {
+     return false
+    }
   }
+
+  registerUser(value){}
 }

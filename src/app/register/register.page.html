@@ -11,21 +11,21 @@
     </ion-card-header>
 
 
-  <form >
+  <form [formGroup]="att_form">
     <br>
     <ion-item>
       <ion-label position="floating" color="primary"> Name </ion-label>
-      <ion-input type="text" ></ion-input>
+      <ion-input type="text" formControlName="name"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating" color="primary">Email</ion-label>
-      <ion-input type="text" ></ion-input>
+      <ion-input type="text" formControlName="email"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating" color="primary">Password</ion-label>
-      <ion-input type="text" ></ion-input>
+      <ion-input type="password" formControlName="password"></ion-input>
     </ion-item>
-    <ion-button class="submit-btn" type="submit" expand="block" >Register</ion-button>
+    <ion-button class="submit-btn" type="submit" expand="block" [disabled]="!att_form.valid">Register</ion-button>
     <p class="go-to-login">
       No account yet? <a (click)="goToLoginPage()">Back to Login</a>
     </p>

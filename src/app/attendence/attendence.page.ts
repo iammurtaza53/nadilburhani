@@ -3,6 +3,7 @@ import { formatDate } from '@angular/common';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { DataService } from '../services/data.service';
 import { ToastController } from '@ionic/angular'
+import {NFC, Ndef} from '@ionic-native/nfc/ngx';
 
 @Component({
   selector: 'app-attendence',
@@ -15,12 +16,15 @@ export class AttendencePage implements OnInit {
   att_form: FormGroup;
   alertCtrl: any;
 
-  constructor(private formBuilder: FormBuilder, private dataService: DataService, private toastController: ToastController) {
+  constructor(private formBuilder: FormBuilder, private dataService: DataService, private toastController: ToastController, private nfc: NFC, private ndef: Ndef, ) {
     this.att_form = this.formBuilder.group({
       reg_no: ['', Validators.required,  ],
       date: ""
     });
   }
+
+
+
 
   logForm() {
     var myDate = new Date();
@@ -53,6 +57,8 @@ export class AttendencePage implements OnInit {
     });
     toast.present();
   }
+
+  
 
   ngOnInit() { }
 

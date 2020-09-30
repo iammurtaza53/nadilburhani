@@ -1,33 +1,31 @@
-
-
 <ion-content>
- 
-    <ion-card-header>
-      <div style="text-align: center;"  >
-        <img src="assets/logo.png" width= "60%" alt="5cube-logo">
-      </div>
-      <ion-card-subtitle></ion-card-subtitle>
-      <ion-card-title style="text-align: center;">SignIn</ion-card-title>
-    </ion-card-header>
 
-  <form [formGroup]="att_form" (ngSubmit)="logForm()">
+  <ion-card-header>
+    <div style="text-align: center;">
+      <img src="assets/logo.png" width="60%" alt="5cube-logo">
+    </div>
+    <ion-card-subtitle></ion-card-subtitle>
+    <ion-card-title style="text-align: center;">SignIn</ion-card-title>
+  </ion-card-header>
+
+  <form [formGroup]="att_form" >
     <ion-item>
       <ion-label position="floating" color="primary">Email</ion-label>
-      <ion-input type="text"  pattern="['^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'']" formControlName="email"></ion-input>
+      <ion-input type="text" formControlName="email"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating" color="primary">Password</ion-label>
-      <ion-input type="text" formContorlName="pass" ></ion-input>
+      <ion-input type="password" formControlName="password"></ion-input>
     </ion-item>
 
-    <ion-button class="submit-btn" type="submit" expand="block" [disabled]="!att_form.valid">Login</ion-button>
+    <ion-button class="submit-btn" (click)="logForm()" expand="block" [disabled]="!att_form.valid">Login</ion-button>
     <!-- <ion-label class="error-message">{{errorMessage}}</ion-label> -->
 
     <p class="go-to-register">
       No account yet? <a (click)="goToRegisterPage()">Create an account.</a>
     </p>
-  </form> 
+  </form>
 
 
 </ion-content>
