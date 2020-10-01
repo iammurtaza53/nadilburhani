@@ -3,7 +3,7 @@ import { formatDate } from '@angular/common';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { DataService } from '../services/data.service';
 import { ToastController } from '@ionic/angular'
-import {NFC, Ndef} from '@ionic-native/nfc/ngx';
+import { NFC } from '@ionic-native/nfc/ngx';
 
 @Component({
   selector: 'app-attendence',
@@ -15,16 +15,15 @@ export class AttendencePage implements OnInit {
 
   att_form: FormGroup;
   alertCtrl: any;
+  readerMode$: any;
 
-  constructor(private formBuilder: FormBuilder, private dataService: DataService, private toastController: ToastController, private nfc: NFC, private ndef: Ndef, ) {
+  constructor(private formBuilder: FormBuilder, private dataService: DataService,
+    private toastController: ToastController, private nfc: NFC) {
     this.att_form = this.formBuilder.group({
-      reg_no: ['', Validators.required,  ],
+      reg_no: ['', Validators.required,],
       date: ""
     });
   }
-
-
-
 
   logForm() {
     var myDate = new Date();
@@ -49,6 +48,23 @@ export class AttendencePage implements OnInit {
     });
   }
 
+  async openNFC() {
+    let flags = this.nfc.FLAG_READER_NFC_A | this.nfc.FLAG_READER_NFC_V;
+    this.readerMode$ = this.nfc.readerMode(flags).subscribe(
+      tag => console.log(JSON.stringify(tag)),
+      err => console.log('Error reading tag', err)
+    );
+
+    // Read NFC Tag - iOS
+    // On iOS, a NFC reader session takes control from your app while scanning tags then returns a tag
+    try {
+      let tag = await this.nfc.scanNdef();
+      console.log(JSON.stringify(tag));
+    } catch (err) {
+      console.log('Error reading tag', err);
+    }
+  }
+
   async openToast(color, msg) {
     const toast = await this.toastController.create({
       message: msg,
@@ -58,9 +74,5 @@ export class AttendencePage implements OnInit {
     toast.present();
   }
 
-  
-
   ngOnInit() { }
-
-
 }
