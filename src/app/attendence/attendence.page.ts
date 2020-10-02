@@ -48,6 +48,7 @@ export class AttendencePage implements OnInit {
     });
   }
 
+  
   async openNFC() {
     let flags = this.nfc.FLAG_READER_NFC_A | this.nfc.FLAG_READER_NFC_V;
     this.readerMode$ = this.nfc.readerMode(flags).subscribe(
@@ -60,8 +61,10 @@ export class AttendencePage implements OnInit {
     try {
       let tag = await this.nfc.scanNdef();
       console.log(JSON.stringify(tag));
+      this.openToast('success',JSON.stringify(tag))
     } catch (err) {
       console.log('Error reading tag', err);
+      this.openToast('danger',err)
     }
   }
 
