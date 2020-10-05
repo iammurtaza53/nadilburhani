@@ -50,24 +50,24 @@ export class AttendencePage implements OnInit {
 
   
   async openNFC() {
+  // Read NFC Tag - Android
+    // Once the reader mode is enabled, any tags that are scanned are sent to the subscriber
     let flags = this.nfc.FLAG_READER_NFC_A | this.nfc.FLAG_READER_NFC_V;
     this.readerMode$ = this.nfc.readerMode(flags).subscribe(
-      tag => console.log(JSON.stringify(tag));
-      this.openToast('success',JSON.stringify(tag)),
-      err => console.log('Error reading tag', err);
-      this.openToast('danger',err)
+        tag => this.openToast('success',JSON.stringify(tag)),
+        err => this.openToast('danger',err)
     );
 
-    // Read NFC Tag - iOS
-    // On iOS, a NFC reader session takes control from your app while scanning tags then returns a tag
-    try {
-      let tag = await this.nfc.scanNdef();
-      console.log(JSON.stringify(tag));
-      this.openToast('success',JSON.stringify(tag))
-    } catch (err) {
-      console.log('Error reading tag', err);
-      this.openToast('danger',err)
-    }
+    // // Read NFC Tag - iOS
+    // // On iOS, a NFC reader session takes control from your app while scanning tags then returns a tag
+    // try {
+    //   let tag = await this.nfc.scanNdef();
+    //   console.log(JSON.stringify(tag));
+    //   this.openToast('success',JSON.stringify(tag))
+    // } catch (err) {
+    //   console.log('Error reading tag', err);
+    //   this.openToast('danger',err)
+    // }
   }
 
   async openToast(color, msg) {
