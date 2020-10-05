@@ -52,8 +52,10 @@ export class AttendencePage implements OnInit {
   async openNFC() {
     let flags = this.nfc.FLAG_READER_NFC_A | this.nfc.FLAG_READER_NFC_V;
     this.readerMode$ = this.nfc.readerMode(flags).subscribe(
-      tag => console.log(JSON.stringify(tag)),
-      err => console.log('Error reading tag', err)
+      tag => console.log(JSON.stringify(tag));
+      this.openToast('success',JSON.stringify(tag)),
+      err => console.log('Error reading tag', err);
+      this.openToast('danger',err)
     );
 
     // Read NFC Tag - iOS
