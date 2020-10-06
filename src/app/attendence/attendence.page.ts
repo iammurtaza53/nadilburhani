@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { formatDate } from '@angular/common';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { DataService } from '../services/data.service';
-import { ToastController } from '@ionic/angular'
-import { NFC } from '@ionic-native/nfc/ngx';
+import { ToastController,Platform } from '@ionic/angular'
+import { NFC, Ndef } from '@ionic-native/nfc/ngx';
 
 @Component({
   selector: 'app-attendence',
@@ -17,8 +17,8 @@ export class AttendencePage implements OnInit {
   alertCtrl: any;
   readerMode$: any;
 
-  constructor(private formBuilder: FormBuilder, private dataService: DataService,
-    private toastController: ToastController, private nfc: NFC) {
+  constructor(private platform: Platform,private formBuilder: FormBuilder, private dataService: DataService,
+    private toastController: ToastController, private nfc: NFC, private ndef: Ndef) {
     this.att_form = this.formBuilder.group({
       reg_no: ['', Validators.required,],
       date: ""
@@ -48,8 +48,21 @@ export class AttendencePage implements OnInit {
     });
   }
 
+
+  
   
   async openNFC() {
+
+    this.nfc.addNdefListener((tag) => {
+      console.log('successfully attached ndef listener');
+      this.openToast('success',JSON.stringify(tag))
+    }, (err) => {
+      console.log('error attaching ndef listener', err);
+      this.openToast('danger',err)
+    }).subscribe((event) => {
+      console.log('received ndef message. the tag contains: ', event.tag);
+      console.log('decoded tag id', this.nfc.bytesToHexString(event.tag.id));
+    });
   // Read NFC Tag - Android
     // Once the reader mode is enabled, any tags that are scanned are sent to the subscriber
     let flags = this.nfc.FLAG_READER_NFC_A | this.nfc.FLAG_READER_NFC_V;
@@ -78,6 +91,10 @@ export class AttendencePage implements OnInit {
     });
     toast.present();
   }
-
+  ionViewWillEnter() {
+    this.platform.ready().then(() => {
+      this.openNFC();
+    });
+  }
   ngOnInit() { }
 }
