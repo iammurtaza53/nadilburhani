@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-archery',
@@ -6,15 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./archery.page.scss'],
 })
 export class ArcheryPage implements OnInit {
+
+
+
+
   slideOpts = {
     initialSlide: 1,
     loop: true,
   };
 
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
 
 
   ngOnInit() {
+  }
+
+  goToRegisterPage() {
+    this.navCtrl.navigateForward('/registration-form');
   }
 
 
