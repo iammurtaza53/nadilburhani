@@ -15,6 +15,9 @@ export class RegistrationFormPage implements OnInit {
 
   }
 
+
+
+
   ngOnInit() {
   }
 
