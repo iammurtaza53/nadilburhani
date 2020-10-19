@@ -13,7 +13,8 @@
     <form [formGroup]="att_form" (ngSubmit)="logForm()">
       <ion-item>
         <ion-label position="floating" color="primary">Reg no</ion-label>
-        <ion-input type="text" pattern="[0-9]*" formControlName="reg_no"></ion-input>
+        <ion-input type="number
+        98=5" pattern="[0-9]*" formControlName="reg_no"></ion-input>
       </ion-item>
       <ion-button expand="block" ion-button type="submit" [disabled]="!att_form.valid">Mark Attendence</ion-button>
     </form>

@@ -14,21 +14,21 @@ import { from } from 'rxjs';
 export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
-    // {
-    //   title: 'Inbox',
-    //   url: '/folder/Inbox',
-    //   icon: 'mail'
-    // },
+    {
+      title: 'Profile',
+      url: '/profile',
+      path2: './assets/images/profile.png',
+    },
     {
       title: '  Attendence',
       url: '/attendence',
       path1: './assets/images/attendence.png',
     },
-    // {
-    //   title: 'Games',
-    //   url: '/games',
-    //   path: 'timer',
-    // },
+    {
+      title: 'News',
+      url: '/news',
+      path1: './assets/images/news.png',
+    },
     {
       title: 'Archery',
       url: '/archery',
@@ -52,7 +52,7 @@ export class AppComponent implements OnInit {
     {
       title: 'Logut',
        url: '/login',
-    //   icon: 'heart'
+       path1: './assets/images/logout.png',
      },
     // {
     //   title: 'Archived',

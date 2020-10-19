@@ -8,6 +8,7 @@
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
               <img src="{{p.path}}" width="50"   />
               <img class="img" src="{{p.path1}}"  />
+              <img class="img1" src="{{p.path2}}"  />
               <!-- <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon> -->
               <ion-label class="logotext">{{ p.title }}</ion-label>
             </ion-item>
