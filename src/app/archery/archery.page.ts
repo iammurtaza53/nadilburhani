@@ -13,6 +13,7 @@ export class ArcheryPage implements OnInit {
 
 
   slideOpts = {
+    SliderPerView: 1.5,
     initialSlide: 1,
     loop: true,
   };

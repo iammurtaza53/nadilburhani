@@ -30,6 +30,10 @@ export class AppComponent implements OnInit {
       path1: './assets/images/news.png',
     },
     {
+      title: "Gallery",
+      url: '/gallery',
+    },
+    {
       title: 'Archery',
       url: '/archery',
       path: './assets/images/archery.png',

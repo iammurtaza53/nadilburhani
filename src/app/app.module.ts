@@ -13,6 +13,12 @@ import {NFC, Ndef} from '@ionic-native/nfc/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ImageModalPageModule } from './image-modal/image-modal.module';
+
+
+
+
+
 
 
 @NgModule({
@@ -23,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,//Add if needed 
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ImageModalPageModule
   ],
   providers: [
     StatusBar,
@@ -31,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     Ndef,
     SplashScreen,
     DataService,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+
   ],
   bootstrap: [AppComponent]
 })
