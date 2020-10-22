@@ -9,8 +9,19 @@
 
 <ion-content padding>
   <ion-slides [options]="sliderOpts">
-    <ion-slide *ngFor="let img of [1, 2, 3]">
-      <img src="./assets/gallery/{{ img }}.jpg" tappable (click)="openPreview(img)" />
+    <ion-slide *ngFor="let img of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
     </ion-slide>
   </ion-slides>
+  <ion-row>
+    <div *ngFor="let img of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
+
+
+      <div class="imglight"> <img src="./assets/gallery/{{img}}.jpg" width="116px" tappable
+          (click)="openPreview(img)" />
+      </div>
+
+
+
+    </div>
+  </ion-row>
 </ion-content>

@@ -10,7 +10,7 @@ import { ImageModalPage } from '../image-modal/image-modal.page';
 })
 export class GalleryPage implements OnInit {
 
-  img: any;
+
 
   sliderOpts = {
     zoom: false,
@@ -22,11 +22,12 @@ export class GalleryPage implements OnInit {
 
   }
 
-  openPreview() {
+  openPreview(img) {
+    console.log(img);
     this.modalController.create({
       component: ImageModalPage,
       componentProps: {
-        img: this.img
+        img: img
       }
     }).then(modal => modal.present());
   }

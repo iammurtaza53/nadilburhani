@@ -1,0 +1,21 @@
+.close-fake{
+    --background: transparent;
+    ion-icon{
+        color: black;
+        font-size: 2rem;
+    }
+}
+
+ion-content{
+    background: black;
+    // background-color: black;
+}
+
+ion-slides {
+    height: 50%;
+    width: 100%;
+
+}
+.rang{
+    background: black;
+}
