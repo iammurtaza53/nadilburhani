@@ -1,7 +1,6 @@
 .close-fake{
     --background: transparent;
     ion-icon{
-        color: black;
         font-size: 2rem;
     }
 }
@@ -16,6 +15,15 @@ ion-slides {
     width: 100%;
 
 }
-.rang{
-    background: black;
+.screen{
+    background-color: black;
+    height: 100%;
+}
+
+ion-toolbar{
+    background-color: black;
+}
+
+ion-header{
+    background-color: black;
 }

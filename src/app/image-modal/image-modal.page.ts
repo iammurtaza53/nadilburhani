@@ -13,10 +13,12 @@ export class ImageModalPage implements OnInit {
   @ViewChild('slider', {read: ElementRef })slider: ElementRef;
 
   sliderOpts = {
-    zoom: {
-      maxRatio: 3,
-    }
+    zoom: false,
+    sliderPerView: 1.5,
+    centeredSlides: true,
+    spaceBetween: 20,
   };
+
 
   constructor(private navParams: NavParams, private modalController: ModalController) { }
 

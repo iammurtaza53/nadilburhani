@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/dashborad',
     pathMatch: 'full'
   },
   {
@@ -46,7 +46,8 @@ const routes: Routes = [
   {
     path: 'registration-form',
     loadChildren: () => import('./registration-form/registration-form.module').then( m => m.RegistrationFormPageModule)
-  },  {
+  },
+  {
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   },
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path: 'image-modal',
     loadChildren: () => import('./image-modal/image-modal.module').then( m => m.ImageModalPageModule)
+  },
+  {
+    path: 'dashborad',
+    loadChildren: () => import('./dashborad/dashborad.module').then( m => m.DashboradPageModule)
   },
 
 

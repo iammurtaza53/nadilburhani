@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bg">
+    <br>
+    <div class="avatar">
+      <ion-avatar>
+        <img src="./assets/images/tahir.jpg" class="size" />
+      </ion-avatar>
+    </div>
+    <br>
+    <br>
+    <h2 class="text">Tahir Murtaza</h2>
+    <br>
+
+
+    <ion-row style="margin-top: -15px;"> 
+      <ion-col>
+        <ion-card>
+
+            <ion-card-subtitle><img src="./assets/images/attendence.png" class="att"/></ion-card-subtitle>
+            <ion-card-title (click)="goToAttendencePage()">Attendence</ion-card-title>
+ 
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+
+          <ion-card-subtitle><img src="./assets/images/news.png" style="margin-top: 2px; margin-right: 74px; margin-left: 34px;"/></ion-card-subtitle>
+          <ion-card-title (click)="goToNewsPage()" style="text-align: center;">News</ion-card-title>
+
+      </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </div>
+
+</ion-content>

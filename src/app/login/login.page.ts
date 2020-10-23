@@ -43,7 +43,7 @@ export class LoginPage implements OnInit {
     let password = this.att_form.value.password
     let result = this.dataService.Login(email, password)
     if(result){
-      this.navCtrl.navigateForward('/attendence');
+      this.navCtrl.navigateForward('/dashborad');
     }
     else{
       console.log(result)

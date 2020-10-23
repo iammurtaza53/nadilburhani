@@ -1,0 +1,33 @@
+.avatar{
+    padding-left: 87px;
+}
+
+.size{
+    width: 135% !important;
+    height: 135% !important;
+    max-width: 100px !important;
+    max-height: 100px !important;
+}
+
+.text{
+    text-align: center;
+    color: white;
+}
+
+.bgcol{
+    --background: url("../../assets/recent-bg.jpg") no-repeat rgb(245, 245, 243) 100% 100%;
+}
+
+.bg{
+    background-image: url("../../assets/home-bg.jpg");
+    height: 50%;
+}
+
+.att{
+    width: 50px;
+    margin-left: 23px;
+}
+
+.row{
+    margin-top: -12;
+}

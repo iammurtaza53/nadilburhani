@@ -1,27 +1,35 @@
-<ion-content background-color="black" fullscreen>
+<ion-header>
+  <ion-toolbar color="white">
 
-  <ion-item  class="close-fake" line="none" text-center>
-    <ion-button (click)="close()" fill="clear" color="light">
-      <ion-icon name="close" slot="start"></ion-icon>
-      Back
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div class="screen">
+
+    <ion-item class="close-fake" line="none" text-center>
+      <ion-button (click)="close()" fill="clear" color="light">
+        <ion-icon name="close" slot="start"></ion-icon>
+        Back
+      </ion-button>
+    </ion-item>
+
+    <ion-button (click)="zoom(true)" fill="clear" color="light">
+      <ion-icon name="add" slot="start"></ion-icon>
+      in
     </ion-button>
-  </ion-item>
 
-  <ion-button (click)="zoom(true)" fill="clear" color="light">
-    <ion-icon name="add" slot="start"></ion-icon>
-    in
-  </ion-button>
+    <ion-button (click)="zoom(false)" fill="clear" color="light">
+      <ion-icon name="remove" slot="start"></ion-icon>
+      out
+    </ion-button>
 
-  <ion-button (click)="zoom(false)" fill="clear" color="light">
-    <ion-icon name="remove" slot="start"></ion-icon>
-    out
-  </ion-button>
-
-  <ion-slides [options]="sliderOpts" #slider>
-    <ion-slide>
-      <div >
-        <img src="./assets/gallery/{{ img }}.jpg" />
-      </div>
-    </ion-slide>
-  </ion-slides>
+    <ion-slides [options]="sliderOpts" #slider>
+      <ion-slide *ngFor="let img of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 11]">
+        <div>
+          <img src="./assets/gallery/{{ img }}.jpg" />
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
 </ion-content>
