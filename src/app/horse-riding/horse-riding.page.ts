@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-horse-riding',
@@ -11,9 +12,13 @@ export class HorseRidingPage implements OnInit {
     loop: true,
   };
 
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
+  }
+
+  goToRegisterPage() {
+    this.navCtrl.navigateForward('/registration-form');
   }
 
 }

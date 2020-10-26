@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 
 import { Platform } from '@ionic/angular';
@@ -80,7 +81,8 @@ export class AppComponent implements OnInit {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private navCtrl: NavController
   ) {
     this.initializeApp();
   }
@@ -97,5 +99,9 @@ export class AppComponent implements OnInit {
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
     }
+  }
+
+  goToHomePage() {
+    this.navCtrl.navigateForward('/dashborad');
   }
 }

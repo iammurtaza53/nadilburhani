@@ -10,34 +10,52 @@
 <ion-content>
   <div class="bg">
     <br>
-    <div class="avatar">
-      <ion-avatar>
-        <img src="./assets/images/tahir.jpg" class="size" />
-      </ion-avatar>
+    <div style="text-align: center;">
+        <img src="./assets/images/download.jpg"  class="size"/>
     </div>
+
+    <h2 class="text">Ali Asghar</h2>
     <br>
-    <br>
-    <h2 class="text">Tahir Murtaza</h2>
-    <br>
 
 
-    <ion-row style="margin-top: -15px;"> 
-      <ion-col>
-        <ion-card>
-
-            <ion-card-subtitle><img src="./assets/images/attendence.png" class="att"/></ion-card-subtitle>
-            <ion-card-title (click)="goToAttendencePage()">Attendence</ion-card-title>
- 
-        </ion-card>
-      </ion-col>
-      <ion-col>
-        <ion-card>
-
-          <ion-card-subtitle><img src="./assets/images/news.png" style="margin-top: 2px; margin-right: 74px; margin-left: 34px;"/></ion-card-subtitle>
-          <ion-card-title (click)="goToNewsPage()" style="text-align: center;">News</ion-card-title>
-
+    <ion-row style="margin-top: -15px;">
+      <ion-card class="box_dashboard">
+        <a (click)="goToAttendencePage()">
+          <ion-card-subtitle style="text-align: center;"><img src="./assets/images/attendence.png" class="att" />
+          </ion-card-subtitle>
+          <ion-card-title class="card_title" >Attendence</ion-card-title>
+        </a>
       </ion-card>
-      </ion-col>
+      <ion-card class="box_dashboard">
+        <a (click)="goToNewsPage()">
+          <ion-card-subtitle style="text-align: center;"><img src="./assets/images/news1.png"
+              class="box_img1" /></ion-card-subtitle>
+          <ion-card-title class="card_title" >News</ion-card-title>
+        </a>
+      </ion-card>
+
+    </ion-row>
+
+    <ion-row style="margin-top: -15px;">
+
+      <ion-card class="box_dashboard">
+        <a (click)="goToGalleryPage()">
+          <ion-card-subtitle style="text-align: center;"><img src="./assets/images/gallery1.png" class="att" />
+          </ion-card-subtitle>
+          <ion-card-title class="card_title" >Gallery</ion-card-title>
+        </a>
+      </ion-card>
+
+
+      <ion-card class="box_dashboard">
+        <a (click)="goToProfilePage()">
+
+          <ion-card-subtitle style="text-align: center;"><img src="./assets/images/profile1.png"
+              class="box_img" /></ion-card-subtitle>
+          <ion-card-title class="card_title" >Profile</ion-card-title>
+        </a>
+      </ion-card>
+
     </ion-row>
 
   </div>

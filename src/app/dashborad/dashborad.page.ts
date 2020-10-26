@@ -21,4 +21,12 @@ export class DashboradPage implements OnInit {
     this.navCtrl.navigateForward('/news');
   }
 
+  goToGalleryPage(){
+    this.navCtrl.navigateForward('/gallery')
+  }
+
+  goToProfilePage(){
+    this.navCtrl.navigateForward('/profile')
+  }
+
 }

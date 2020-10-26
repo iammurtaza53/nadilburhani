@@ -1,12 +1,10 @@
-.avatar{
-    padding-left: 87px;
-}
-
 .size{
     width: 135% !important;
     height: 135% !important;
     max-width: 100px !important;
     max-height: 100px !important;
+    border: 2px ;
+    border-radius: 50%;
 }
 
 .text{
@@ -24,10 +22,33 @@
 }
 
 .att{
-    width: 50px;
-    margin-left: 23px;
+    width: 48px;
+    margin-top: 5px;
 }
 
 .row{
     margin-top: -12;
+}
+.box_dashboard{
+    padding: 25px 7px;
+    width: 42%;
+    float: left;
+}
+.card_title{
+    font-size: 15px;
+    margin-top: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    color: cadetblue;
+}
+
+.box_img{
+    width: 54px;  
+    margin-top: 4px
+}
+
+.box_img1{
+    width: 50px;  
+    margin-top: 4px;
 }

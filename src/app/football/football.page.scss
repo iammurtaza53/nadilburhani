@@ -1,5 +1,5 @@
 .vc_custom_heading{
-    font-size: 42px;
+    font-size: 22px;
     color: #f15922;
     text-align: center;
     font-weight: 700;
@@ -8,6 +8,7 @@
 .heading{
     font-weight: 700;
     margin-left: 7px;
+    font-size: 17px;
 }
 
 .para{
@@ -52,4 +53,18 @@
 
 .bg{
     --background: url("../../assets/recent-bg.jpg") no-repeat rgb(245, 245, 243) 100% 100%;
+}
+
+.register{
+    background-color:  #f15922;
+    text-align: center;
+}
+
+.text{
+    font-size: 25px;
+    color: #ffffff;
+    // text-align: ;
+    font-family: Lato;
+    font-weight: 700;
+    font-style: normal;
 }
