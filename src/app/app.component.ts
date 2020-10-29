@@ -16,6 +16,11 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
+      title: 'Dashborad',
+      url: '/dashborad',
+
+    },
+    {
       title: 'Profile',
       url: '/profile',
       path2: './assets/images/profile.png',
@@ -101,7 +106,4 @@ export class AppComponent implements OnInit {
     }
   }
 
-  goToHomePage() {
-    this.navCtrl.navigateForward('/dashborad');
-  }
 }

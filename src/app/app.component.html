@@ -4,9 +4,7 @@
       <ion-content class="bg">
         <ion-list id="inbox-list">
           <div class="logo">
-            <a (click)="goToHomePage()">
               <img src="./assets/logo.png" />
-            </a>
           </div>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none"
