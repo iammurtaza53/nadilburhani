@@ -16,8 +16,9 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Dashborad',
+      title: 'Dashboard',
       url: '/dashborad',
+      path2: './assets/images/dashboard.png',
 
     },
     {
