@@ -27,6 +27,10 @@ export class AppComponent implements OnInit {
       path2: './assets/images/profile.png',
     },
     {
+      title: 'Payment History',
+      url: '/fees',
+    },
+    {
       title: '  Attendence',
       url: '/attendence',
       path1: './assets/images/attendence.png',

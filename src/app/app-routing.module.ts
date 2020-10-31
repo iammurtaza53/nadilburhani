@@ -66,7 +66,11 @@ const routes: Routes = [
   {
     path: 'dashborad',
     loadChildren: () => import('./dashborad/dashborad.module').then( m => m.DashboradPageModule)
+  },  {
+    path: 'fees',
+    loadChildren: () => import('./fees/fees.module').then( m => m.FeesPageModule)
   },
+
 
 
 
