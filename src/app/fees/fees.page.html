@@ -7,23 +7,55 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="bg">
-    <br>
-    <div style="text-align: center;">
-      <img src="./assets/images/download.jpg" class="size" />
-    </div>
-
+<ion-content class="bg">
+  <div class="bg1">
+    <br><br>
     <h2 class="text">Ali Asghar</h2>
+    <h3 class="text">000763</h3>
     <br>
 
-    <ion-row style="margin-top: -15px;">
+    <ion-row >
       <ion-card class="box_dashboard">
-        <a (click)="goToAttendencePage()">
-          <ion-card-subtitle> </ion-card-subtitle>
-          <ion-card-title ></ion-card-title>
-        </a>
+          <ion-card-subtitle style="font-size: 10px;
+          text-align: center;" >AMOUNT PAYABLE </ion-card-subtitle>
+          <ion-card-subtitle class="card_title" > PKR</ion-card-subtitle>
+          <ion-card-title class="card_title">1,500 </ion-card-title>
+      </ion-card>
+      <ion-card class="box_dashboard1">
+          <ion-card-subtitle style="text-align: center; font-size: 11px;">Due Date </ion-card-subtitle>
+          <ion-card-subtitle class="card_title" >10 June </ion-card-subtitle>
+          <ion-card-title class="card_title">2020</ion-card-title>
       </ion-card>
     </ion-row>
+
+    <br>
+
+
+    <ion-row style="margin-top: -15px;">
+      <ion-card class="payment">
+        <ion-subtitle class="payemnt_text"> Payemnt History</ion-subtitle>
+      </ion-card>
+      <ion-card class="payment1">
+        <ion-card-subtitle class="pay1"> June/2020 </ion-card-subtitle>
+        <ion-card-subtitle class="pay" >Due Date </ion-card-subtitle>
+        <ion-card-title class="pay3">10-June-2020</ion-card-title>
+    </ion-card>
+      <ion-card class="payment1">
+          <ion-card-subtitle class="pay1"> May/2020 </ion-card-subtitle>
+          <ion-card-subtitle class="pay" >Recvied Date </ion-card-subtitle>
+          <ion-card-title class="pay2">17-May-2020</ion-card-title>
+      </ion-card>
+      <ion-card class="payment1">
+        <ion-card-subtitle class="pay1"> April/2020 </ion-card-subtitle>
+        <ion-card-subtitle class="pay" >Recvied Date </ion-card-subtitle>
+        <ion-card-title class="pay2">9-April-2020</ion-card-title>
+    </ion-card>
+    <ion-card class="payment1">
+      <ion-card-subtitle class="pay1"> March/2020 </ion-card-subtitle>
+      <ion-card-subtitle class="pay" >Recvied Date </ion-card-subtitle>
+      <ion-card-title class="pay2">10-March-2020</ion-card-title>
+  </ion-card>
+    </ion-row>
+
   </div>
 </ion-content>

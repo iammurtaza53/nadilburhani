@@ -16,9 +16,9 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Dashboard',
+      title: 'Home',
       url: '/dashborad',
-      path2: './assets/images/dashboard.png',
+      path2: './assets/images/home.png',
 
     },
     {
@@ -29,6 +29,7 @@ export class AppComponent implements OnInit {
     {
       title: 'Payment History',
       url: '/fees',
+      path1: './assets/images/payment.png',
     },
     {
       title: '  Attendence',

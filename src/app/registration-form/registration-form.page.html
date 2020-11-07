@@ -11,7 +11,7 @@
   <h2 class="vc_custom_heading"> REGISTRATION FORM </h2>
   <ion-item>
     <ion-label position="floating">Select your Sport</ion-label>
-    <ion-select interface="popover" >
+    <ion-select interface="popover" (ionChange)="archeryDisplay($event)">
       <ion-select-option value=""></ion-select-option>
       <ion-select-option value="football">Football</ion-select-option>
       <ion-select-option value="cricket">Cricket</ion-select-option>
@@ -21,8 +21,8 @@
   </ion-item>
   <br>
   <ion-item>
-    <ion-label position="floating"  style="font-size: 14px;">Do You Have an ITS Number ?</ion-label>
-    <ion-select interface="popover">
+    <ion-label position="floating" style="font-size: 14px;">Do You Have an ITS Number ?</ion-label>
+    <ion-select interface="popover" (ionChange)="archeryDisplay($event)">
       <ion-select-option value=""></ion-select-option>
       <ion-select-option value="yes">Yes</ion-select-option>
       <ion-select-option value="no">No</ion-select-option>
@@ -44,6 +44,27 @@
 
   <br>
   <ion-item>
+    <ion-label position="floating">Time</ion-label>
+    <ion-select interface="popover"  >
+      <div *ngIf="isCricket">
+        <ion-select-option value="cricket1">Saturday & Sunday 08:00am to 10:00am </ion-select-option>
+        <ion-select-option value="cricket2">Saturday & Sunday 9:45am to 10:20am </ion-select-option>
+        <ion-select-option value="cricket3">Saturday & Sunday 10:20am to 11:00am </ion-select-option>
+      </div>
+      <div *ngIf="isArchery">
+        <ion-select-option value="archery1">Saturday & Sunday 09:00am to 9:40am </ion-select-option>
+        <ion-select-option value="archery2">Saturday & Sunday 9:45am to 10:20am </ion-select-option>
+        <ion-select-option value="archery3">Saturday & Sunday 10:20am to 11:00am </ion-select-option>
+      </div>
+      
+      <!-- <ion-select-option value="20above">20 above</ion-select-option> -->
+    </ion-select>
+  </ion-item>
+  <br>
+
+
+  <br>
+  <ion-item>
     <ion-label position="floating">How did you hear about us ? </ion-label>
     <ion-select interface="popover">
       <ion-select-option value=""></ion-select-option>
@@ -55,21 +76,22 @@
   </ion-item>
   <br>
 
-  
+
   <h1 class="text2">Rules & Regulation</h1>
 
-  <ul >
-    <li class="text1">We don`t assure you that you will get your selected Time Slot, it may depend on number of registrations in that slot .</li>
+  <ul>
+    <li class="text1">We don`t assure you that you will get your selected Time Slot, it may depend on number of
+      registrations in that slot .</li>
     <li class="text1">All ANBSA members should pay Fees in advance by 5th of every month.</li>
     <li class="text1">Members should wear proper kit during practice and matches.</li>
     <li class="text1">Members should come on time and follow discipline in and off the field.</li>
     <li class="text1">Members are responsible for the safe custody of their equipment and belongings.</li>
-    <li class="text1">ANBSA will not be responsible for any damage for theft.</li>      
+    <li class="text1">ANBSA will not be responsible for any damage for theft.</li>
     <li class="text1">ANB will not be responsible for any type of injury.</li>
   </ul>
-    <br>
-    <ion-button class="submit-btn"  expand="block">Send</ion-button>
-  
+  <br>
+  <ion-button class="submit-btn" expand="block">Send</ion-button>
+
   <br>
   <br>
 </ion-content>

@@ -9,16 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationFormPage implements OnInit {
 
+  isArchery = false;
+  isCricket = false;
+ 
 
+  constructor() {
 
-  constructor() { 
+  }
 
+  archeryDisplay(event) {
+    if (event.detail.value == 'archery') {
+      this.isArchery = true
+      this.isCricket = false
+    }
+    else if (event.detail.value == 'cricket') {
+      this.isCricket = true
+      this.isArchery = false;
+    }
+  
   }
 
 
 
 
   ngOnInit() {
+
   }
+
 
 }

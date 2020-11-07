@@ -1,4 +1,4 @@
-.bg{
+.bg1{
     background-image: url("../../assets/home-bg.jpg");
     height: 36%;
 }
@@ -15,4 +15,91 @@
 .text{
     text-align: center;
     color: white;
+}
+
+.att{
+    width: 48px;
+    margin-top: 5px;
+}
+
+.box_img1{
+    width: 50px;  
+    margin-top: 4px;
+}
+
+.card_title{
+    font-size: 15px;
+    margin-top: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;}
+    
+
+.box_dashboard{
+    padding: 12px 5px;
+    width: 44%;
+    float: left;
+}
+
+.box_dashboard1{
+    padding: 12px 5px;
+    width: 40%;
+    float: left;
+}
+
+.payment{
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+
+}
+
+.payment1{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin-top: -7px;
+
+}
+
+.payemnt_text{
+    color: #505050;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.pay{
+    text-align: right;
+    padding-right: 20px;
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+.pay1{
+    float: left;
+    font-size: 13px;
+    margin-left: 7px;
+    padding-top: 10px;
+}
+
+.pay2{
+    float: right;
+    padding: 2px;
+    margin-right: 25px;
+    font-size: 11px;
+    padding-bottom: 10px;
+    color: green;
+}
+
+.pay3{
+    float: right;
+    padding: 2px;
+    margin-right: 17px;
+    font-size: 11px;
+    padding-bottom: 10px;
+    color: red;
+}
+
+.bg{
+    --background: url("../../assets/recent-bg.jpg") no-repeat rgb(245, 245, 243) 100% 100%;
 }

@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/registration-form',
     pathMatch: 'full'
   },
   {
@@ -66,7 +66,8 @@ const routes: Routes = [
   {
     path: 'dashborad',
     loadChildren: () => import('./dashborad/dashborad.module').then( m => m.DashboradPageModule)
-  },  {
+  },
+  {
     path: 'fees',
     loadChildren: () => import('./fees/fees.module').then( m => m.FeesPageModule)
   },
