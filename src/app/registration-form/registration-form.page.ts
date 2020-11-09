@@ -13,6 +13,8 @@ export class RegistrationFormPage implements OnInit {
   isCricket = false;
   isFootball = false;
   isHorse = false;
+
+  isItsnumber = false;
  
 
   constructor() {
@@ -44,8 +46,15 @@ export class RegistrationFormPage implements OnInit {
       this.isArchery = false;
       this.isHorse = true;
     }
+  }
 
-  
+  itsDisplay(event) {
+    if (event.detail.value == 'yes') {
+      this.isItsnumber = true;
+    }
+    else if (event.detail.value == 'no') {
+      this.isItsnumber = false;
+    }
   }
 
 

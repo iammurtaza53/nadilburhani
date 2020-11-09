@@ -10,7 +10,7 @@
 <ion-content class="bg">
   <h2 class="vc_custom_heading"> REGISTRATION FORM </h2>
   <ion-item>
-    <ion-label position="floating">Select your Sport</ion-label>
+    <ion-label position="floating" class="font_bolder">Select your Sport</ion-label>
     <ion-select interface="popover" (ionChange)="archeryDisplay($event)">
       <ion-select-option value="football">Football</ion-select-option>
       <ion-select-option value="cricket">Cricket</ion-select-option>
@@ -20,15 +20,20 @@
   </ion-item>
 
   <ion-item>
-    <ion-label position="floating" style="font-size: 14px;">Do You Have an ITS Number ?</ion-label>
-    <ion-select interface="popover" (ionChange)="archeryDisplay($event)">
+    <ion-label position="floating" style="font-size: 14px;" class="font_bolder">Do You Have an ITS Number ?</ion-label>
+    <ion-select interface="popover" (ionChange)="itsDisplay($event)">
       <ion-select-option value="yes">Yes</ion-select-option>
       <ion-select-option value="no">No</ion-select-option>
     </ion-select>
   </ion-item>
 
+  <ion-item *ngIf="isItsnumber">
+    <ion-label position="floating" class="font_bolder">ITS Number</ion-label>
+    <ion-input type="number" ></ion-input>
+  </ion-item>
+
   <ion-item>
-    <ion-label position="floating">Age Group</ion-label>
+    <ion-label position="floating" class="font_bolder">Age Group</ion-label>
     <ion-select interface="popover">
       <ion-select-option value="7-10years">7 - 10 years</ion-select-option>
       <ion-select-option value="10-15years">10 - 15 years</ion-select-option>
@@ -39,36 +44,36 @@
 
 
   <ion-item *ngIf="isCricket">
-    <ion-label position="floating">Time</ion-label>
+    <ion-label position="floating" class="font_bolder">Time</ion-label>
     <ion-select interface="popover">
       <div>
-        <ion-select-option value="cricket1">Saturday & Sunday 8am to 10am </ion-select-option>
-        <ion-select-option value="cricket2">Saturday & Sunday 9:45am to 10:20am </ion-select-option>
-        <ion-select-option value="cricket3">Saturday & Sunday 10:20am to 11:00am </ion-select-option>
+        <ion-select-option value="cricket1">Sat & Sun 8am to 10am </ion-select-option>
+        <ion-select-option value="cricket2">Sat & Sun 9:45am to 10:20am </ion-select-option>
+        <ion-select-option value="cricket3">Sat & Sun 10:20am to 11am </ion-select-option>
       </div>
     </ion-select>
   </ion-item>
 
 
   <ion-item *ngIf="isFootball">
-    <ion-label position="floating">Time</ion-label>
+    <ion-label position="floating" class="font_bolder">Time</ion-label>
     <ion-select interface="popover">
       <div>
-        <ion-select-option value="football1">Saturday & Sunday 8am to 10am </ion-select-option>
-        <ion-select-option value="football2">Saturday & Sunday 04:00pm to 06:00pm </ion-select-option>
-        <ion-select-option value="football3">Tuesday & Thursday 04:00pm to 06:00pm</ion-select-option>
+        <ion-select-option value="football1">Sat & Sun 8am to 10am </ion-select-option>
+        <ion-select-option value="football2">Sat & Sun 4pm to 6pm </ion-select-option>
+        <ion-select-option value="football3">Tue & Thur 4pm to 6pm</ion-select-option>
       </div>
     </ion-select>
   </ion-item>
 
 
   <ion-item *ngIf="isArchery">
-    <ion-label position="floating">Time</ion-label>
+    <ion-label position="floating" class="font_bolder">Time</ion-label>
     <ion-select interface="popover">
       <div>
-        <ion-select-option value="archery1">Saturday & Sunday 09:00am to 9:40am </ion-select-option>
-        <ion-select-option value="archery2">Saturday & Sunday 9:45am to 10:20am </ion-select-option>
-        <ion-select-option value="archery3">Saturday & Sunday 10:20am to 11:00am </ion-select-option>
+        <ion-select-option value="archery1">Sat & Sun 9am to 9:40am </ion-select-option>
+        <ion-select-option value="archery2" style="font-size: 1px;">Sat & Sun 9:45am to 10:20am </ion-select-option>
+        <ion-select-option value="archery3">Sat & Sun 10:20am to 11am </ion-select-option>
       </div>
     </ion-select>
   </ion-item>
@@ -76,7 +81,7 @@
   <ion-list *ngIf="isHorse">
     <br>
     <ion-radio-group value="grape">
-      <ion-label position="floating">Weekends Time Slots</ion-label>
+      <ion-label position="floating" class="font_bolder">Weekends Time Slots</ion-label>
       <br>
       <ion-item>
         <ion-label>Saturday 7:30am to 9:30am</ion-label>
@@ -84,22 +89,60 @@
       </ion-item>
 
       <ion-item>
-        <ion-label>Saturday 7:30am to 9:30am</ion-label>
+        <ion-label>Saturday 04:00pm to 06:00pm</ion-label>
         <ion-radio color="tertiary" value="horse2"> </ion-radio>
       </ion-item>
 
       <ion-item>
-        <ion-label>Saturday 7:30am to 9:30am</ion-label>
+        <ion-label>Sunday 7:30am to 9:30am</ion-label>
         <ion-radio color="tertiary" value="horse3"> </ion-radio>
       </ion-item>
 
+      <ion-item>
+        <ion-label>Sunday 04:00pm to 06:00pm</ion-label>
+        <ion-radio color="tertiary" value="horse4"> </ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <br> 
+    <ion-radio-group value="grape">
+      <ion-label position="floating" class="font_bolder">Weekdays Time Slots</ion-label>
+      <br>
+      <ion-item>
+        <ion-label>Tuesday 7:30am to 9:30am</ion-label>
+        <ion-radio color="tertiary" value="horse5"> </ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Tuesday 04:00pm to 06:00pm</ion-label>
+        <ion-radio color="tertiary" value="horse6"> </ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Thursday 7:30am to 9:30am</ion-label>
+        <ion-radio color="tertiary" value="horse7"> </ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Thursday 04:00pm to 06:00pm</ion-label>
+        <ion-radio color="tertiary" value="horse8"> </ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Friday 7:30am to 9:30</ion-label>
+        <ion-radio color="tertiary" value="horse9"> </ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Friday 04:00pm t0 06:00pm</ion-label>
+        <ion-radio color="tertiary" value="horse10"> </ion-radio>
+      </ion-item>
     </ion-radio-group>
   </ion-list>
 
 
 
   <ion-item>
-    <ion-label position="floating">How did you hear about us ? </ion-label>
+    <ion-label position="floating" class="font_bolder">How did you hear about us ? </ion-label>
     <ion-select interface="popover">
       <ion-select-option value=""></ion-select-option>
       <ion-select-option value="friends">Friends or Relatives</ion-select-option>
