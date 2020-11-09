@@ -11,6 +11,8 @@ export class RegistrationFormPage implements OnInit {
 
   isArchery = false;
   isCricket = false;
+  isFootball = false;
+  isHorse = false;
  
 
   constructor() {
@@ -19,13 +21,30 @@ export class RegistrationFormPage implements OnInit {
 
   archeryDisplay(event) {
     if (event.detail.value == 'archery') {
-      this.isArchery = true
-      this.isCricket = false
+      this.isCricket = false;
+      this.isHorse = false;
+      this.isArchery = true;
+      this.isFootball = false;
     }
     else if (event.detail.value == 'cricket') {
-      this.isCricket = true
+      this.isCricket = true;
+      this.isHorse = false;
       this.isArchery = false;
+      this.isFootball = false;
     }
+    else if (event.detail.value == 'football') {
+      this.isCricket = false;
+      this.isFootball = true;
+      this.isArchery = false;
+      this.isHorse = false;
+    }
+    else if (event.detail.value == "horse_riding") {
+      this.isCricket = false;
+      this.isFootball = false;
+      this.isArchery = false;
+      this.isHorse = true;
+    }
+
   
   }
 

@@ -12,58 +12,92 @@
   <ion-item>
     <ion-label position="floating">Select your Sport</ion-label>
     <ion-select interface="popover" (ionChange)="archeryDisplay($event)">
-      <ion-select-option value=""></ion-select-option>
       <ion-select-option value="football">Football</ion-select-option>
       <ion-select-option value="cricket">Cricket</ion-select-option>
       <ion-select-option value="archery">Archery</ion-select-option>
       <ion-select-option value="horse_riding">Horse Riding</ion-select-option>
     </ion-select>
   </ion-item>
-  <br>
+
   <ion-item>
     <ion-label position="floating" style="font-size: 14px;">Do You Have an ITS Number ?</ion-label>
     <ion-select interface="popover" (ionChange)="archeryDisplay($event)">
-      <ion-select-option value=""></ion-select-option>
       <ion-select-option value="yes">Yes</ion-select-option>
       <ion-select-option value="no">No</ion-select-option>
     </ion-select>
   </ion-item>
-  <br>
+
   <ion-item>
     <ion-label position="floating">Age Group</ion-label>
     <ion-select interface="popover">
-      <ion-select-option value=""></ion-select-option>
       <ion-select-option value="7-10years">7 - 10 years</ion-select-option>
       <ion-select-option value="10-15years">10 - 15 years</ion-select-option>
       <ion-select-option value="genesis">15 - 20 years</ion-select-option>
       <ion-select-option value="20above">20 above</ion-select-option>
     </ion-select>
   </ion-item>
-  <br>
 
 
-  <br>
-  <ion-item>
+  <ion-item *ngIf="isCricket">
     <ion-label position="floating">Time</ion-label>
-    <ion-select interface="popover"  >
-      <div *ngIf="isCricket">
-        <ion-select-option value="cricket1">Saturday & Sunday 08:00am to 10:00am </ion-select-option>
+    <ion-select interface="popover">
+      <div>
+        <ion-select-option value="cricket1">Saturday & Sunday 8am to 10am </ion-select-option>
         <ion-select-option value="cricket2">Saturday & Sunday 9:45am to 10:20am </ion-select-option>
         <ion-select-option value="cricket3">Saturday & Sunday 10:20am to 11:00am </ion-select-option>
       </div>
-      <div *ngIf="isArchery">
+    </ion-select>
+  </ion-item>
+
+
+  <ion-item *ngIf="isFootball">
+    <ion-label position="floating">Time</ion-label>
+    <ion-select interface="popover">
+      <div>
+        <ion-select-option value="football1">Saturday & Sunday 8am to 10am </ion-select-option>
+        <ion-select-option value="football2">Saturday & Sunday 04:00pm to 06:00pm </ion-select-option>
+        <ion-select-option value="football3">Tuesday & Thursday 04:00pm to 06:00pm</ion-select-option>
+      </div>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-item *ngIf="isArchery">
+    <ion-label position="floating">Time</ion-label>
+    <ion-select interface="popover">
+      <div>
         <ion-select-option value="archery1">Saturday & Sunday 09:00am to 9:40am </ion-select-option>
         <ion-select-option value="archery2">Saturday & Sunday 9:45am to 10:20am </ion-select-option>
         <ion-select-option value="archery3">Saturday & Sunday 10:20am to 11:00am </ion-select-option>
       </div>
-      
-      <!-- <ion-select-option value="20above">20 above</ion-select-option> -->
     </ion-select>
   </ion-item>
-  <br>
+
+  <ion-list *ngIf="isHorse">
+    <br>
+    <ion-radio-group value="grape">
+      <ion-label position="floating">Weekends Time Slots</ion-label>
+      <br>
+      <ion-item>
+        <ion-label>Saturday 7:30am to 9:30am</ion-label>
+        <ion-radio color="tertiary" value="horse1"> </ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Saturday 7:30am to 9:30am</ion-label>
+        <ion-radio color="tertiary" value="horse2"> </ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Saturday 7:30am to 9:30am</ion-label>
+        <ion-radio color="tertiary" value="horse3"> </ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+  </ion-list>
 
 
-  <br>
+
   <ion-item>
     <ion-label position="floating">How did you hear about us ? </ion-label>
     <ion-select interface="popover">
