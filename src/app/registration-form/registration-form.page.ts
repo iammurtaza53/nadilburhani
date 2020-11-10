@@ -15,6 +15,7 @@ export class RegistrationFormPage implements OnInit {
   isHorse = false;
 
   isItsnumber = false;
+
  
 
   constructor() {
@@ -57,6 +58,10 @@ export class RegistrationFormPage implements OnInit {
     }
   }
 
+  // ionOnChnagw(value){
+  //   value is in group 1
+
+  // }
 
 
 
