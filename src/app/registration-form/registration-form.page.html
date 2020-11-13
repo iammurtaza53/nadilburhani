@@ -76,36 +76,98 @@
       </div>
     </ion-select>
   </ion-item>
-
-  <ion-item>
-    <ion-label position="floating" class="font_bolder"> Time </ion-label>
-    <ion-select interface="popover" >
-      <ion-list>
-        <ion-item>
-        <ion-select-option disabled>Weekends Time Slots </ion-select-option>
-        <ion-select-option value="horse1">Sat & Sun 9am to 9:40am </ion-select-option>
-        <ion-select-option value="horse2">Sat & Sun 9:45am to 10:20am </ion-select-option>
-        <ion-select-option value="horse3">Sat & Sun 10:20am to 11am </ion-select-option>
-      </ion-item>
-      <ion-item>
-        <ion-select-option disabled>Weekdays Time Slots </ion-select-option>
-        <ion-select-option value="horse4">Monday 9am to 9:40am </ion-select-option>
-        <ion-select-option value="horse5">Tuesday 9:45am to 10:20am </ion-select-option>
-        <ion-select-option value="horse6">Wednesday 10:20am to 11am </ion-select-option>
-      </ion-item>
-      </ion-list>
-    </ion-select>
-  </ion-item>
-
-  <!-- <ion-list *ngIf="isHorse">
+ 
+  <ion-list *ngIf="isHorse">
     <br>
-    <ion-select interface="popover">
-      <ion-label position="floating" class="font_bolder">Weekends Time Slots</ion-label>
+    <ion-radio-group value="grape">
+      <ion-label position="floating">Weekends Time Slots</ion-label>
       <br>
-        <ion-select-optio  value="horse1"> Saturday 7:30am to 9:30am </ion-select-optio>
-    </ion-select> -->
+      <ion-item>
+        <ion-label>Saturday 7:30am to 9:30am</ion-label>
+        <ion-radio color="tertiary" value="horse1"> </ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Saturday 7:30am to 9:30am</ion-label>
+        <ion-radio color="tertiary" value="horse2"> </ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Saturday 7:30am to 9:30am</ion-label>
+        <ion-radio color="tertiary" value="horse3"> </ion-radio>
+      </ion-item>
+
+      <ion-label position="floating" class="font_bolder">Weekdays Time Slots</ion-label>
+      <br>
+      <ion-item>
+        <ion-label>Tuesday 7:30am to 9:30am</ion-label>
+        <ion-radio color="tertiary" value="horse5"> </ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Tuesday 04:00pm to 06:00pm</ion-label>
+        <ion-radio color="tertiary" value="horse6"> </ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Thursday 7:30am to 9:30am</ion-label>
+        <ion-radio color="tertiary" value="horse7"> </ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Thursday 04:00pm to 06:00pm</ion-label>
+        <ion-radio color="tertiary" value="horse8"> </ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Friday 7:30am to 9:30</ion-label>
+        <ion-radio color="tertiary" value="horse9"> </ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Friday 04:00pm to 06:00pm</ion-label>
+        <ion-radio color="tertiary" value="horse10"> </ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+  </ion-list>
 
   <!-- <ion-item>
+    <ion-label position="floating" class="font_bolder"> Time </ion-label>
+    <ion-select interface="popover" multiple="true" (ionChange)="horseDisplay($event)">
+      <ion-list>
+        <div>
+          <ion-item>
+            <ion-select interface="popover">
+              <ion-select-option disabled>Weekends Time Slots </ion-select-option>
+              <ion-select-option value="horse1">Sat & Sun 9am to 9:40am </ion-select-option>
+              <ion-select-option value="horse2">Sat & Sun 9:45am to 10:20am </ion-select-option>
+              <ion-select-option value="horse3">Sat & Sun 10:20am to 11am </ion-select-option>
+            </ion-select>
+          </ion-item>
+        </div>
+        <div>
+          <ion-item>
+            <ion-select interface="popover">
+              <ion-select-option disabled>Weekdays Time Slots </ion-select-option>
+              <ion-select-option value="horse4">Monday 9am to 9:40am </ion-select-option>
+              <ion-select-option value="horse5">Tuesday 9:45am to 10:20am </ion-select-option>
+              <ion-select-option value="horse6">Wednesday 10:20am to 11am </ion-select-option>
+            </ion-select>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-select>
+  </ion-item> -->
+
+  <!-- <ion-list *ngIf="isHorse"> -->
+    <!-- <br>
+    
+      <ion-label position="floating" class="font_bolder">Weekends Time Slots</ion-label>
+      <br>
+
+
+   <ion-item> 
         <ion-label>Saturday 04:00pm to 06:00pm</ion-label>
         <ion-radio color="tertiary" value="horse2"> </ion-radio>
       </ion-item>
@@ -153,8 +215,8 @@
         <ion-label>Friday 04:00pm t0 06:00pm</ion-label>
         <ion-radio color="tertiary" value="horse10"> </ion-radio>
       </ion-item>
-    </ion-radio-group> -->
-  <!-- </ion-list> -->
+    </ion-radio-group>  -->
+
 
 
 

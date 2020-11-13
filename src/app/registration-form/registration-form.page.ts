@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { disableDebugTools } from '@angular/platform-browser';
 
 
 
@@ -13,6 +14,15 @@ export class RegistrationFormPage implements OnInit {
   isCricket = false;
   isFootball = false;
   isHorse = false;
+
+  horse1 = false;
+  horse2 = false;
+  horse3 = false;
+  horse4 = false;
+  horse5 = false;
+  horse6 = false;
+
+  
 
   isItsnumber = false;
 
@@ -57,6 +67,14 @@ export class RegistrationFormPage implements OnInit {
       this.isItsnumber = false;
     }
   }
+
+  // horseDisplay(event) {
+  //   if (event.detail.value == "header1"){
+  //   this.horse1 = true;
+  //   this.horse2 = false;
+  //   this.horse3 = false;
+  //   }
+  // }
 
   // ionOnChnagw(value){
   //   value is in group 1
